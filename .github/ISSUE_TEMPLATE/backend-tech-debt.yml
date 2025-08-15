@@ -1,0 +1,52 @@
+name: "Backend Tech Debt"
+projects: ["MobileArts/4"]
+description: Track refactors, cleanup, or upgrades
+labels: ["area:backend", "type:tech-debt"]
+title: "[Backend][TechDebt]: "
+body:
+  - type: input
+    id: service
+    attributes:
+      label: Service / Module
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What’s painful now (maintainability, risk, cost)?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Work
+      description: Refactor plan, scope, and acceptance criteria
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options: ["P0", "P1", "P2", "P3"]
+    validations:
+      required: true
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: Story Points
+      description: Relative effort/complexity (1 = tiny, 10 = epic)
+      options: ["1","2","3","4","5","6","7","8","9","10"]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business priority for scheduling
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true

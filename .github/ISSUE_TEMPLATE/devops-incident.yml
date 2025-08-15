@@ -1,0 +1,71 @@
+name: "DevOps Incident"
+projects: ["MobileArts/4"]
+description: Track an incident and mitigation tasks
+labels: ["area:devops", "type:incident"]
+title: "[Incident]: "
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - SEV-1 (Critical)
+        - SEV-2 (High)
+        - SEV-3 (Medium)
+        - SEV-4 (Low)
+    validations:
+      required: true
+  - type: input
+    id: start
+    attributes:
+      label: Start Time (UTC)
+      placeholder: "2025-08-15 12:34"
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact Summary
+      description: Affected systems, users, symptoms
+    validations:
+      required: true
+  - type: textarea
+    id: timeline
+    attributes:
+      label: Timeline
+      description: Key events and timestamps
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Mitigation / Workaround
+  - type: textarea
+    id: followups
+    attributes:
+      label: Follow-up Actions (postmortem, perms fix, tests)
+  - type: checkboxes
+    id: comms
+    attributes:
+      label: Communications
+      options:
+        - label: Stakeholders notified
+        - label: Status page updated
+        - label: Postmortem scheduled
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: Story Points
+      description: Relative effort/complexity (1 = tiny, 10 = epic)
+      options: ["1","2","3","4","5","6","7","8","9","10"]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business priority for scheduling
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true

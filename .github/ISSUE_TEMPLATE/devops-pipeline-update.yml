@@ -1,0 +1,61 @@
+name: "DevOps Pipeline Update"
+projects: ["MobileArts/4"]
+description: CI/CD workflow or runner changes
+labels: ["area:devops", "type:pipeline"]
+title: "[DevOps][Pipeline]: "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What’s changing in the pipeline and why?
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Files/Paths
+      description: List workflow files or shared templates changed
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk & Blast Radius
+      description: Protected branches, environments, or repos impacted
+  - type: textarea
+    id: perf
+    attributes:
+      label: Performance
+      description: Before → After timings; cache/parallelization strategy
+  - type: textarea
+    id: rollout
+    attributes:
+      label: Rollout & Fallback
+      description: How to deploy the change and how to revert if needed
+  - type: checkboxes
+    id: security
+    attributes:
+      label: Security
+      options:
+        - label: Least-privilege tokens validated
+        - label: Secrets masked and not echoed
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: Story Points
+      description: Relative effort/complexity (1 = tiny, 10 = epic)
+      options: ["1","2","3","4","5","6","7","8","9","10"]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business priority for scheduling
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true

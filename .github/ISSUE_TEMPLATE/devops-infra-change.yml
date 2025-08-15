@@ -1,0 +1,67 @@
+name: "DevOps Infra Change"
+projects: ["MobileArts/4"]
+description: Infrastructure/config-as-code modifications
+labels: ["area:devops", "type:infra-change"]
+title: "[DevOps][Infra]: "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What infra/config is changing and why?
+    validations:
+      required: true
+  - type: checkboxes
+    id: iac
+    attributes:
+      label: IaC Surfaces
+      options:
+        - label: Terraform
+        - label: Helm/Kustomize
+        - label: Ansible
+        - label: Other
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Environments, services, cost, expected downtime
+  - type: textarea
+    id: plan
+    attributes:
+      label: Deployment Plan
+      description: Order of steps, approvals, timing window
+  - type: textarea
+    id: rollback
+    attributes:
+      label: Rollback Plan
+      description: Exact commands/steps to revert safely
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-merge checks
+      options:
+        - label: Plan/diff reviewed
+        - label: Secrets validated
+        - label: Monitoring updates prepared
+        - label: Security review (if needed)
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: Story Points
+      description: Relative effort/complexity (1 = tiny, 10 = epic)
+      options: ["1","2","3","4","5","6","7","8","9","10"]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business priority for scheduling
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true

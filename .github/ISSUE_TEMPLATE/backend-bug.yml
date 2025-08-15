@@ -1,0 +1,85 @@
+name: "Backend Bug"
+projects: ["MobileArts/4"]
+description: Report a backend defect (API, logic, DB, jobs)
+labels: ["area:backend", "type:bug"]
+title: "[Backend][Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Please provide clear steps and expected vs actual behavior.
+  - type: input
+    id: service
+    attributes:
+      label: Service / Module
+      description: e.g., user-svc, billing-api
+      placeholder: user-svc
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What were you trying to do?
+      placeholder: Brief context or link to related tickets
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Numbered steps with specific inputs
+      placeholder: |
+        1. Call PATCH /v1/users/123 with body X
+        2. Observe response Y
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Screenshots / Evidence
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - S1 - Critical (prod down / data loss)
+        - S2 - High (major impact)
+        - S3 - Medium
+        - S4 - Low
+    validations:
+      required: true
+  - type: checkboxes
+    id: impact
+    attributes:
+      label: Impacted Areas
+      options:
+        - label: API behavior
+        - label: Background jobs
+        - label: Database / migrations
+        - label: Performance / latency
+        - label: Security / privacy
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: Story Points
+      description: Relative effort/complexity (1 = tiny, 10 = epic)
+      options: ["1","2","3","4","5","6","7","8","9","10"]
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business priority for scheduling
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true

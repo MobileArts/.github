@@ -1,0 +1,67 @@
+name: "Backend Feature"
+projects: ["MobileArts/4"]
+description: Propose a backend feature or enhancement
+labels: ["area:backend", "type:feature"]
+title: "[Backend][Feature]: "
+body:
+  - type: input
+    id: service
+    attributes:
+      label: Service / Module
+      placeholder: user-svc
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What problem are we solving? Who benefits?
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements / Acceptance Criteria
+      placeholder: |
+        - When X, then Y…
+        - API returns …
+    validations:
+      required: true
+  - type: textarea
+    id: api
+    attributes:
+      label: API Sketch (plain text)
+      description: Endpoints and request/response shapes at a high level
+  - type: textarea
+    id: data_model
+    attributes:
+      label: Data Model / Migration Considerations
+  - type: checkboxes
+    id: nonfunc
+    attributes:
+      label: Non-functional
+      options:
+        - label: Performance targets defined
+        - label: Security implications reviewed
+        - label: Observability (metrics/logs/traces) planned
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: Story Points
+      description: Relative effort/complexity (1 = tiny, 10 = epic)
+      options: ["1","2","3","4","5","6","7","8","9","10"]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business priority for scheduling
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true

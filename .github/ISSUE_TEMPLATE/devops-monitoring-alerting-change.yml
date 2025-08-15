@@ -1,0 +1,55 @@
+name: "DevOps Monitoring/Alerting Change"
+projects: ["MobileArts/4"]
+description: Dashboards, metrics, logs, traces, or alert rules
+labels: ["area:devops", "type:monitoring"]
+title: "[DevOps][Monitoring]: "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What monitoring/alerting is changing and why?
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: Metrics/traces/logs added/updated; dashboards; alert thresholds
+  - type: textarea
+    id: slo
+    attributes:
+      label: SLO/SLA Impact
+  - type: textarea
+    id: validation
+    attributes:
+      label: Rollout & Validation
+      description: How to deploy and how to test (synthetics, load, replay)
+  - type: checkboxes
+    id: noise
+    attributes:
+      label: Noise Controls
+      options:
+        - label: Grouping/suppression configured
+        - label: Deadman switch / heartbeats reviewed
+  - type: dropdown
+    id: story_points
+    attributes:
+      label: Story Points
+      description: Relative effort/complexity (1 = tiny, 10 = epic)
+      options: ["1","2","3","4","5","6","7","8","9","10"]
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business priority for scheduling
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true

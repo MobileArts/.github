@@ -1,0 +1,51 @@
+name: Story / Task
+description: Use this for backend and DevOps work
+title: "[<TEAM>] <Short title>"
+labels: ["needs-estimation", "backend"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Short description of the work
+      placeholder: "Implement new API endpoint for order tracking"
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Success conditions to mark this task as done
+      placeholder: |
+        1. Endpoint returns correct data for valid requests
+        2. Returns 404 for invalid IDs
+    validations:
+      required: true
+
+  - type: input
+    id: story-points
+    attributes:
+      label: Story Points
+      description: "1... 10 (1 = simple, 10 = complex)"
+      placeholder: "1"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-notes
+    attributes:
+      label: Notes / Links
+      placeholder: "Link to diagrams, docs, or related PRs"
