@@ -48,14 +48,6 @@ body:
         - label: Stakeholders notified
         - label: Status page updated
         - label: Postmortem scheduled
-  - type: dropdown
-    id: story_points
-    attributes:
-      label: Story Points
-      description: Relative effort/complexity (1 = tiny, 10 = epic)
-      options: ["1","2","3","4","5","6","7","8","9","10"]
-    validations:
-      required: true
 
   - type: dropdown
     id: priority
