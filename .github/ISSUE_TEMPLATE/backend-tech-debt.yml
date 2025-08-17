@@ -4,12 +4,6 @@ description: Track refactors, cleanup, or upgrades
 labels: ["area:backend", "type:tech-debt"]
 title: "[BE][TechDebt]: "
 body:
-  - type: input
-    id: service
-    attributes:
-      label: Service / Module
-    validations:
-      required: true
   - type: textarea
     id: problem
     attributes:

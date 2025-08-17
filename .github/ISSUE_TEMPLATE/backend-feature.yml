@@ -4,13 +4,6 @@ description: Propose a backend feature or enhancement
 labels: ["area:backend", "type:feature"]
 title: "[BE][Feature]: "
 body:
-  - type: input
-    id: service
-    attributes:
-      label: Service / Module
-      placeholder: user-svc
-    validations:
-      required: true
   - type: textarea
     id: summary
     attributes:
