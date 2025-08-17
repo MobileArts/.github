@@ -1,0 +1,122 @@
+name: "Backend Testing & Check"
+description: Manage tasks for backend testing OR investigation/checking issues
+title: "[BE][Test/Check]: "
+labels: ["area:backend", "type:test"]
+projects: ["MobileArts/4"]
+
+body:
+  - type: dropdown
+    id: task_type
+    attributes:
+      label: Task Type
+      description: Is this for testing or for checking/investigating an issue?
+      options:
+        - Testing
+        - Check / Investigate
+    validations:
+      required: true
+
+  - type: dropdown
+    id: testing_type
+    attributes:
+      label: Testing Type (if applicable)
+      description: Only fill if task type = Testing
+      multiple: true
+      options:
+        - Functional
+        - Regression
+        - Integration
+        - Contract / Consumer-Driven
+        - End-to-End (E2E)
+        - Performance / Load
+        - Security
+        - Smoke / Sanity
+        - UAT
+        - Exploratory
+
+  - type: input
+    id: related
+    attributes:
+      label: Related Issue/PR
+      description: Link to the feature/bug/migration issue or PR this task belongs to
+      placeholder: https://github.com/org/repo/issues/123 or PR link
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Task Scope
+      description: What will be tested or checked? Include in-scope items and call out out-of-scope.
+      placeholder: |
+        Testing:
+        - PATCH /v1/users/{id} validations
+        Checking:
+        - Investigate high DB latency for GET /v1/users
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Pass/fail criteria OR expected check outcomes
+      placeholder: |
+        Testing:
+        - Email validation rejects invalid formats
+        Checking:
+        - Identify if DB slowness is caused by missing index
+
+  - type: checkboxes
+    id: environments
+    attributes:
+      label: Target Environments
+      options:
+        - label: Dev
+        - label: Staging
+        - label: Prod (read-only verification)
+    validations:
+      required: true
+
+  - type: textarea
+    id: data_setup
+    attributes:
+      label: Data / Setup Needed
+      description: Fixtures, seed scripts, or reproduction steps for checks
+      placeholder: |
+        - make seed-users
+        - Simulate 500 RPS load
+        - Check logs around 2025-08-15 13:00 UTC
+
+  - type: textarea
+    id: execution_steps
+    attributes:
+      label: How to Run
+      description: Commands, queries, or steps for testing/checking
+      placeholder: |
+        Testing:
+        - make test
+        - docker compose up && make test-integration
+        Checking:
+        - Run explain analyze on query X
+        - Inspect logs in Loki with filter Y
+
+  - type: textarea
+    id: results
+    attributes:
+      label: Results / Findings
+      description: Summarize test outcomes or investigation results
+      placeholder: |
+        Testing:
+        - 12/12 tests passed
+        - 1 regression found in endpoint X
+        Checking:
+        - Root cause traced to connection pool exhaustion
+
+  - type: textarea
+    id: artifacts
+    attributes:
+      label: Evidence / Artifacts
+      description: Links to CI runs, logs, traces, dashboards
+      placeholder: |
+        - CI run: https://github.com/org/repo/actions/runs/xxxx
+        - Grafana dashboard screenshot
+        - Loki logs link
