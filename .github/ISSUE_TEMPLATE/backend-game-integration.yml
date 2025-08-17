@@ -1,4 +1,4 @@
-name: "Backend Feature"
+name: "Backend Game Integration"
 projects: ["MobileArts/4"]
 description: Propose or track backend service integration with the Game Gateway
 labels: ["area:backend", "type:integration", "domain:game"]

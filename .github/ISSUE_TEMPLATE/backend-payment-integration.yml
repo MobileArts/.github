@@ -1,4 +1,4 @@
-name: "Backend Feature"
+name: "Backend Payment Integration"
 projects: ["MobileArts/4"]
 description: Propose or track work related to integrating or updating a payment gateway
 labels: ["area:backend", "type:integration", "domain:payment"]
