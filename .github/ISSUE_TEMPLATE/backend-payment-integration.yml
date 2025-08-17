@@ -15,7 +15,7 @@ body:
     id: requirements
     attributes:
       label: Requirements
-      default: |
+      value: |
         - Must log correlation IDs
         - Must be compatible to Payment Gateway vx.x.x
         - Must have idempotent check
@@ -28,7 +28,7 @@ body:
     attributes:
       label: Security & Compliance
       description: Any security/compliance requirements tied to this work?
-      default: |
+      value: |
         - PCI-DSS considerations
         - Tokenization of cards
         - Fraud prevention checks, using shield? <Mention/update as necessary>
@@ -40,7 +40,7 @@ body:
     attributes:
       label: Dependencies
       description: Other teams, services, or infra this work depends on.
-      default: |
+      value: |
         - Gateway provider sandbox credentials
         - DevOps for new secrets/infra
         - Finance team for settlement testing
@@ -49,7 +49,7 @@ body:
     attributes:
       label: Testing & Validation Plan
       description: How will we know this integration works?
-      default: |
+      value: |
         - Unit tests for core logic
         - Integration test with Payment Gateway
         - Load test with 10 RPS
@@ -59,7 +59,7 @@ body:
     attributes:
       label: Acceptance Criteria
       description: Clear, measurable outcomes for "done".
-      default: |
+      value: |
         - Integration deployed in staging
         - Payment Gateway contract tests pass
         - Observability dashboards updated
