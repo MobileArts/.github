@@ -1,0 +1,85 @@
+name: "Backend Feature"
+projects: ["MobileArts/4"]
+description: Propose or track backend service integration with the Game Gateway
+labels: ["area:backend", "type:integration", "domain:game"]
+title: "[BE][GCI]: <game/integration name> integration"
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What problem are we solving? Who benefits?
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: Requirements
+      placeholder: |
+        - Must log correlation IDs
+        - Must be compatible to Game Gateway vx.x.x
+        - Must have idempotent check
+        - Able to do automatic retry when delivery fails with fallback mechanism
+        - Supported Game List: <List down every game that should be supported on this enhancement>
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Other teams, services, or infra this work depends on.
+      placeholder: |
+        - Game Gateway team for API contract review
+        - DevOps team for CI/CD config
+        - Whitelist IP ranges
+        - Callback URL Setup on Third Party Dashboard
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing & Validation Plan
+      description: How will we know this integration works?
+      placeholder: |
+        - Unit tests for core logic
+        - Integration test with Game Gateway mock
+        - Load test with 10 RPS
+        - Idempotency Checks
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: Clear, measurable outcomes for "done".
+      placeholder: |
+        - Integration deployed in staging
+        - Game Gateway contract tests pass
+        - Observability dashboards updated
+        - Load test meets SLO
+  - type: textarea
+    id: api
+    attributes:
+      label: API Sketch (plain text)
+      description: Endpoints and request/response shapes at a high level
+  - type: textarea
+    id: data_model
+    attributes:
+      label: Data Model / Migration Considerations
+  - type: checkboxes
+    id: nonfunc
+    attributes:
+      label: Non-functional
+      options:
+        - label: Performance targets defined
+        - label: Security implications reviewed
+        - label: Observability (metrics/logs/traces) planned
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business priority for scheduling
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true
