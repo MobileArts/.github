@@ -2,7 +2,7 @@ name: "Backend Bug"
 projects: ["MobileArts/4"]
 description: Report a backend defect (API, logic, DB, jobs)
 labels: ["area:backend", "type:bug"]
-title: "[Backend][Bug]: "
+title: "[BE][Bug]: "
 body:
   - type: markdown
     attributes:

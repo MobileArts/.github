@@ -2,7 +2,7 @@ name: "DevOps Incident"
 projects: ["MobileArts/4"]
 description: Track an incident and mitigation tasks
 labels: ["area:devops", "type:incident"]
-title: "[Incident]: "
+title: "[DevOps][Incident]: "
 body:
   - type: dropdown
     id: severity

@@ -2,7 +2,7 @@ name: "Backend Tech Debt"
 projects: ["MobileArts/4"]
 description: Track refactors, cleanup, or upgrades
 labels: ["area:backend", "type:tech-debt"]
-title: "[Backend][TechDebt]: "
+title: "[BE][TechDebt]: "
 body:
   - type: input
     id: service

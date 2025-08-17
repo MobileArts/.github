@@ -2,7 +2,7 @@ name: "Backend Feature"
 projects: ["MobileArts/4"]
 description: Propose a backend feature or enhancement
 labels: ["area:backend", "type:feature"]
-title: "[Backend][Feature]: "
+title: "[BE][Feature]: "
 body:
   - type: input
     id: service
