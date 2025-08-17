@@ -22,13 +22,6 @@ body:
     attributes:
       label: Proposed Work
       description: Refactor plan, scope, and acceptance criteria
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority
-      options: ["P0", "P1", "P2", "P3"]
-    validations:
-      required: true
 
   - type: dropdown
     id: priority
