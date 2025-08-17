@@ -15,7 +15,7 @@ body:
     id: requirements
     attributes:
       label: Requirements
-      placeholder: |
+      value: |
         - Must log correlation IDs
         - Must be compatible to Game Gateway vx.x.x
         - Must have idempotent check
@@ -28,7 +28,7 @@ body:
     attributes:
       label: Dependencies
       description: Other teams, services, or infra this work depends on.
-      placeholder: |
+      value: |
         - Game Gateway team for API contract review
         - DevOps team for CI/CD config
         - Whitelist IP ranges
@@ -38,7 +38,7 @@ body:
     attributes:
       label: Testing & Validation Plan
       description: How will we know this integration works?
-      placeholder: |
+      value: |
         - Unit tests for core logic
         - Integration test with Game Gateway mock
         - Load test with 10 RPS
@@ -48,7 +48,7 @@ body:
     attributes:
       label: Acceptance Criteria
       description: Clear, measurable outcomes for "done".
-      placeholder: |
+      value: |
         - Integration deployed in staging
         - Game Gateway contract tests pass
         - Observability dashboards updated
