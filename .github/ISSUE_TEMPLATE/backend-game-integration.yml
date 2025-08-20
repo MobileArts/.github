@@ -37,6 +37,19 @@ body:
         - DevOps team for CI/CD config
         - Game Gateway Enhancement (Optional, only if there is a new data/variable that current gateway didn't provide)
   - type: textarea
+    id: dependencies
+    attributes:
+      label: dependencies
+      description: Other teams, services, or infra this work depends on.
+      value: |
+        - [ ] GP (third party) API Documentation
+        - [ ] GP (third party) Sandbox/Development Credential
+          - [ ] Sandbox/Development url
+          - [ ] Sandbox/Development secret key or others that have similar purpose
+          - [ ] Sandbox/Development userid and/or serverid and/or roleid for testing
+        - [ ] DevOps team for CI/CD config
+        - [ ] Game Gateway Enhancement (Optional, only if there is a new data/variable that current gateway didn't provide)
+  - type: textarea
     id: testing
     attributes:
       label: Testing & Validation Plan
