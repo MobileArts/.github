@@ -17,7 +17,7 @@ body:
       label: Requirements
       value: |
         - [ ]  Must log each request to GP
-        - [ ]  Must be compatible to latest Game Gateway (vx.x.x)
+        - [ ]  Must be compatible to latest Game Gateway (vx.x.x) (https://github.com/MobileArts/ms-game-gateway/releases)
         - [ ]  Must have the correct return format data
         - [ ]  Able to do full transaction flow from Game Gateway
         - [ ]  Supported Game List: <List down every game that should be supported on this enhancement>
