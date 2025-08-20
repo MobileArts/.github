@@ -16,26 +16,13 @@ body:
     attributes:
       label: Requirements
       value: |
-        - Must log each request to GP
-        - Must be compatible to latest Game Gateway (vx.x.x)
-        - Must have the correct return format data
-        - Able to do full transaction flow from Game Gateway
-        - Supported Game List: <List down every game that should be supported on this enhancement>
+        - [ ]  Must log each request to GP
+        - [ ]  Must be compatible to latest Game Gateway (vx.x.x)
+        - [ ]  Must have the correct return format data
+        - [ ]  Able to do full transaction flow from Game Gateway
+        - [ ]  Supported Game List: <List down every game that should be supported on this enhancement>
     validations:
       required: true
-  - type: textarea
-    id: dependencies1
-    attributes:
-      label: Dependencies
-      description: Other teams, services, or infra this work depends on.
-      value: |
-        - GP (third party) API Documentation
-        - GP (third party) Sandbox/Development Credential
-            - Sandbox/Development url
-            - Sandbox/Development secret key or others that have similar purpose
-            - Sandbox/Development userid and/or serverid and/or roleid for testing
-        - DevOps team for CI/CD config
-        - Game Gateway Enhancement (Optional, only if there is a new data/variable that current gateway didn't provide)
   - type: textarea
     id: dependencies
     attributes:
@@ -55,18 +42,18 @@ body:
       label: Testing & Validation Plan
       description: How will we know this integration works?
       value: |
-        - Unit tests for core logic
-        - Integration test only with ms-gci
-        - Integration test with Game Gateway
+        - [ ]  Unit tests for core logic
+        - [ ]  Integration test only with ms-gci
+        - [ ]  Integration test with Game Gateway
   - type: textarea
     id: acceptance
     attributes:
       label: Acceptance Criteria
       description: Clear, measurable outcomes for "done".
       value: |
-        - Integration deployed in staging
-        - Game Gateway contract tests pass
-        - Observability dashboards updated
+        - [ ]  Integration deployed in staging
+        - [ ]  Game Gateway contract tests pass
+        - [ ]  Observability dashboards updated
   - type: textarea
     id: api
     attributes:
