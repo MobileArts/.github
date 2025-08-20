@@ -24,7 +24,7 @@ body:
     validations:
       required: true
   - type: textarea
-    id: dependencies
+    id: dependencies1
     attributes:
       label: Dependencies
       description: Other teams, services, or infra this work depends on.
