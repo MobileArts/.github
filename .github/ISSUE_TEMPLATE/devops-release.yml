@@ -1,0 +1,78 @@
+name: "DevOps Release"
+projects: ["MobileArts/4"]
+description: Central tracking issue for a release or deployment request
+title: "[DevOps][Release]: YYYY-MM-DD - "
+labels: ["area:devops", "type:release"]
+
+
+body:
+  - type: textarea
+    id: approved_cards
+    attributes:
+      label: Approved Release Cards
+      description: List of release cards/tickets that have been approved for this cycle
+      placeholder: |
+        - [REL-123] User profile updates
+        - [REL-456] Payment retries
+
+  - type: textarea
+    id: linked_prs_issues
+    attributes:
+      label: Linked PRs / Issues
+      description: Link the GitHub PRs or issues that are included in this release
+      placeholder: |
+        - #789 Add new payment retries
+        - #790 Fix profile image upload
+        - #791 Update API gateway caching
+
+  - type: checkboxes
+    id: environments
+    attributes:
+      label: Target Environments
+      description: Select which environments this release is intended for
+      options:
+        - label: Development
+        - label: Staging
+        - label: Production
+
+  - type: textarea
+    id: special_notes
+    attributes:
+      label: Special Notes
+      description: Any deployment notes, feature flags, DB migrations, or manual steps
+      placeholder: |
+        - Enable feature flag `new_checkout_flow`
+        - Apply migration script `V2025_08__add_orders_table.sql`
+
+  - type: textarea
+    id: rollout
+    attributes:
+      label: Deployment Plan
+      description: Steps to deploy this release
+      placeholder: |
+        1. Deploy to staging
+        2. Run smoke tests
+        3. Deploy to production
+
+  - type: textarea
+    id: postchecks
+    attributes:
+      label: Post-Deployment Validation
+      description: Steps to confirm release health
+      placeholder: |
+        - Monitor error logs
+        - Verify login & payment flows
+        - Check dashboard metrics
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Business priority for scheduling
+      options:
+        - P0 - Critical
+        - P1 - High
+        - P2 - Medium
+        - P3 - Low
+    validations:
+      required: true
